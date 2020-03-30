@@ -46,17 +46,10 @@ class CalculatorTests {
 		assertEquals(1, calculator.subtract(2,1), "2 - 1 should equal 1");
 	}
 
-	@ParameterizedTestTwo(name = "{#} - {#} = {resultant #}")
-	@CsvSource({
-			"3,    1,   2",
-			"10,   5,   5",
-			"67,   43,  24",
-			"100,  100, 0"
-	})
-	void subtract(int first, int second, int resultant){
+	@OrderedTestThree
+	@DisplayName("50 - 50 = 0")
+	void subtractsTwoNumbersForZeroCheck() {
 		Calculator calculator = new Calculator();
-		assertEquals(resultant, calculator.subtract(first, second),
-				() -> first + " + " + second + " should equal " + resultant);
-	}
-
+		assertEquals(0, calculator.subtract(50,50), "50 - 50 should equal 0");
+	}	
 }
