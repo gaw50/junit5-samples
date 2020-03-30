@@ -47,7 +47,7 @@ class CalculatorTests {
 	}
 
 	@ParameterizedTestTwo(name = "{#} - {#} = {resultant #}")
-	CsvSource({
+	@CsvSource({
 			"3,    1,   2",
 			"10,   5,   5",
 			"67,   43,  24",
