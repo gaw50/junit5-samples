@@ -39,14 +39,14 @@ class CalculatorTests {
 				() -> first + " + " + second + " should equal " + expectedResult);
 	}
 
-	@OrderedTestTwo
+	@Test
 	@DisplayName("2 - 1 = 1")
 	void subtractsTwoNumbers() {
 		Calculator calculator = new Calculator();
 		assertEquals(1, calculator.subtract(2,1), "2 - 1 should equal 1");
 	}
 
-	@OrderedTestThree
+	@Test
 	@DisplayName("50 - 50 = 0")
 	void subtractsTwoNumbersForZeroCheck() {
 		Calculator calculator = new Calculator();
