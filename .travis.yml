@@ -1,18 +1,18 @@
 dist: xenial
-​
+
 language: java
-install: true
-​
-matrix: 
-  include: 
-  - jdk: oraclejdk9
-​
-script: 
-  - git config --global push.default simple
-  - export GIT_TAG=$TRAVIS_BRANCH.$TRAVIS_BUILD_NUMBER
-  - gradle clean build
-​
-  skip_cleanup: true  
-  on:
-    tags: false
-    all_branches: true
+jdk: oraclejdk9
+
+jobs:
+  include:
+# starter
+    - stage: starter
+      name: "Jupiter Starter Sample: Gradle, Java and Junit"
+      script: 
+        - cd $TRAVIS_BUILD_DIR/junit5-jupiter-starter-gradle
+        - export GIT_TAG=$TRAVIS_BRANCH.$TRAVIS_BUILD_NUMBER
+        - gradle clean build --console plain
+        - gradle test --console plain
+        - gradle clean test --console plain
+        - gradle build --console plain
+
