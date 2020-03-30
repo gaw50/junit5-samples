@@ -51,7 +51,7 @@ class CalculatorTests {
 			"3,    1,   2",
 			"10,   5,   5",
 			"67,   43,  24",
-			"100,  100, 0",
+			"100,  100, 0"
 	})
 	void subtract(int first, int second, int resultant){
 		Calculator calculator = new Calculator();
