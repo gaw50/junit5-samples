@@ -41,7 +41,7 @@ class CalculatorTests {
 
 	@OrderedTestTwo
 	@DisplayName("2 - 1 = 1")
-	voidSubtractsTwoNumbers() {
+	void subtractsTwoNumbers() {
 		Calculator calculator = new Calculator();
 		assertEquals(1, calculator.subtract(2,1), "2 - 1 should equal 1");
 	}
